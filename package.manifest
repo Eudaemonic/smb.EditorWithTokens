@@ -1,0 +1,35 @@
+﻿{
+    //you can define multiple editors
+    propertyEditors: [
+            {
+                
+                alias: "smb.EditorWithTokens",
+             
+                name: "Editor with tokens",
+               
+                icon: "icon-mailbox",
+            
+                group: "Rich Content",
+              
+                editor: {
+                    view: "~/App_Plugins/EditorWithTokens/EditorWithTokens.html",
+					valueType: "TEXT"
+                },
+                prevalues: {
+                    fields: [
+                        {
+                            label: "Tokens",
+                            description: "Provide a list of tokens",
+                            key: "tokens",
+                            view: "multivalues"
+                        }
+                    ]
+
+                }
+            }
+        ],
+
+        javascript: [
+        '~/App_Plugins/EditorWithTokens/EditorWithTokens.controller.js'
+    ]
+}

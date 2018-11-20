@@ -1,0 +1,19 @@
+﻿
+
+<div ng-controller="smb.editorWithTokensController">
+<div class="col-md-12">
+    <p>Select a Token</p>
+    <form ng-submit="addToken(token)">
+        <select name="multipleSelect" id="multipleSelect" ng-options="key.value for key in model.config.tokens" ng-model="token">
+    
+        </select>
+        <button type="submit" class="btn umb-button__button btn-info umb-button--">Add</button>
+    </form>
+
+    <hr />
+</div>
+    <div class="col-md-12">
+        <textarea rows="30" class="umb-editor umb-textarea textstring" ng-model="model.value"></textarea>
+        
+    </div>
+</div>
